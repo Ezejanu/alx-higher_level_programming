@@ -1,10 +1,2 @@
 #!/bin/bash
-export PYCODE='print(f"Best School: {88+10}")'
-cat << EOF > pyscript.py
-#!/usr/bin/python3
-import subprocess
-
-subprocess.call ([$PYCODE])
-EOF
-
-#usr/bin/python3/$PYCODE
+python3 -c "$PYCODE"
