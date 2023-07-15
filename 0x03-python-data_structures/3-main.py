@@ -6,3 +6,4 @@ print_reversed_list_integer(my_list)
 list2 = []
 print_reversed_list_integer(list2)
 list3 = ['Eze', 'is' 'a', 'lady']
+print_reversed_list_integer(list3)
