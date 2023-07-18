@@ -1,6 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
-#include <python.h>
+#include "Python.h"
 
 /**
  * print_python_list_info - a function that prints
@@ -16,14 +16,14 @@ void print_python_list_info(PyObject *p)
 	Py_ssize_t list_size = PyList_Size(p);
 	Py_ssize_t list_allocated = ((PyListObject *)p)->allocated;
 
-	printf("[*] Size of the Python List = %d\n", list_size);
-	printf("[*] Allocated = %d\n", list_allocated);
+	printf("[*] Size of the Python List = %zd\n", list_size);
+	printf("[*] Allocated = %zd\n", list_allocated);
 
 	for (; i < list_size; i++)
 	{
 		element = PyList_GetItem(p, i);
 		element_type = Py_TYPE(element)->tp_name;
 
-		printf("Element %d: %s\n", i, element_type);
+		printf("Element %zd: %s\n", i, element_type);
 	}
 }
