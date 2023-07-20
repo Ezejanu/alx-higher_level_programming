@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 def uniq_add(my_list=[]):
     unique_values = []
-    if my_list:
+    if not my_list:
+        return unique_values
+    elif my_list:
         unique_values = set(my_list)
         total = 0
         for value in unique_values:
