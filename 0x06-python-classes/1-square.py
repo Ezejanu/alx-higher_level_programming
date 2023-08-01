@@ -5,8 +5,6 @@
 class Square:
     """This is an class square containing size"""
 
-    size = ""
-
     def __init__(self, __size):
         """Initialising the instance variable"""
 
