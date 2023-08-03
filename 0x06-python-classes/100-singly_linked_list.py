@@ -5,6 +5,7 @@ class Node:
 """ This class defines a node of a singly linked list """
 
     def __init__(self, data, next_node=None):
+    """ The init method defines the parameters of the node """
         self.__data = data
         self.__next_node = next_node
 
@@ -30,10 +31,16 @@ class Node:
 
 
 class SinglyLinkedList:
+""" This class defines a singly linked list """
+
     def __init__(self):
+    """ Defines the instantiation of the head with no setter or getter """
+
         self.__head = None
 
     def sorted_insert(self, value):
+    """ This inserts a new Node in the correct sorted position in the list """
+
         newNode = Node(value)
 
         if self.__head is None:
