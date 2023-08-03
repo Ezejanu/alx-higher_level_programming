@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-
+""" This function defines a class Node """
 
 class Node:
+""" This class defines a node of a singly linked list """
+
     def __init__(self, data, next_node=None):
         self.__data = data
         self.__next_node = next_node
