@@ -44,12 +44,14 @@ class Rectangle:
         return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        
         rectangle_str = ""
-        if self.__width != 0 and self.__height != 0:
-            for i in range(self.__height):
-                row = ""
-                # Reset row for each new row of the rectangle
-                for j in range(self.__width):
-                    row += "#"
-                rectangle_str += row + "\n"
+        for i in range(self.__height):
+            row = ""
+            # Reset row for each new row of the rectangle
+            for j in range(self.__width):
+                row += "#"
+            rectangle_str += row + "\n"
         return rectangle_str
