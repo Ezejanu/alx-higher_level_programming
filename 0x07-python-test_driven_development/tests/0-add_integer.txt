@@ -1,0 +1,66 @@
+The ``0-add_integer`` module
+
+======================
+
+Using 0-add_integer
+----------------------
+
+How to use the add_integer function
+
+Usage:
+
+    This function returns the sum of its two parameters.
+
+	First import the relevant function (0-add_integer) from the file:
+
+	    >>> add_integer = __import__('0-add_integer').add_integer
+
+    Next, implement/call the function:
+
+        >>> add_integer(12, 3)
+	    15
+
+	For either argument -ve
+
+	    >>> add_integer(5, -2)
+	    3
+
+	both args are -ve ints:
+
+	    >>> add_integer(-3, -8)
+	    -11
+
+	either arg is a float
+
+        >>> add_integer(0.5, 1)
+	    1
+
+	both args are float
+	
+	    >>> add_integer(2.6, 8.1)
+	    10
+
+	both args are -ve float
+
+	    >>> add_integer(-1.2, -3.4)
+	    -4
+
+	value of b is the default
+
+	    >>> add_integer(10, 98)
+	    108
+
+
+	Exceptions
+	==========
+    >>> add_integer(2, str)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+	>>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+	>>> add_integer(str, str)
+    Traceback (most recent call last):
+    TypeError: b must be an integer

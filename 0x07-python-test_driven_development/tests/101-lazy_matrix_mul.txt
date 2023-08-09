@@ -1,0 +1,53 @@
+#101-lazy_matrix_mul.txt
+
+============================
+Using 101-lazy_matrix_mul.py
+============================
+
+
+Using the matrix_multiplication function
+``lazy_matrix_mul(m_a, m_b)``
+
+Usage
+=====
+
+
+The lazy_matrix_mul function returns the product of two matrices
+``m_a`` and ``m_b``
+
+First step: import the function
+
+
+    >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+Next step: implement/call the function:
+
+    >>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+    [[ 7 10]
+     [15 22]]
+
+
+Multiplication of matrices containing float
+
+    >>> print(lazy_matrix_mul([[1, 2.0]], [[3.4, 4], [5, 6.9]]))
+    [[13.4 17.8]]
+
+
+Multiplication of matrices containing negative values
+
+    >>> print(lazy_matrix_mul([[1, -2]], [[3, 4], [-5, 6]]))
+    [[13 -8]]
+
+
+
+Exceptions
+==========
+
+    >>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[str, 2], [3, 4]]))
+    Traceback (most recent call last):
+        ...
+    TypeError: Object arrays are not currently supported
+
+    >>> print(lazy_matrix_mul([[1, 2], [ ]], [[str, 2], [3, 4]]))
+    Traceback (most recent call last):
+    TypeError: Object arrays are not currently supported
