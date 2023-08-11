@@ -47,7 +47,5 @@ class TestMaxInteger(unittest.TestCase):
         testList = [1, 54, 2, 19, 45]
         self.assertEqual(max_integer(testList), 54)
 
-    if __name__ == "__main__":
-        import doctest
-
-        doctest.testmod()
+if __name__ == '__main__':
+    unittest.main()
