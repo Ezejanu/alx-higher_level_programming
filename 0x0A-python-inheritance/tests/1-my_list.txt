@@ -1,0 +1,33 @@
+``` 1-my_list.py ```
+
+
+Using the my-list
+=================
+
+The function prints a sorted list (in ascending order)
+
+Usage:
+======
+
+    This function prints prints the list, but sorted (ascending sort)
+
+    First step: import the module
+
+	>>> MyList = __import__('1-my_list').MyList
+
+	Next, implement/call the function:
+
+    For positive ints
+	    >>> l = MyList([1, 8, 9, 7, 2, 3])
+	    >>> l.print_sorted()
+	    [1, 2, 3, 7, 8, 9]
+
+	For negative ints
+	    >>> l = MyList([-5, -7, -9, -11])
+	    >>> l.print_sorted()
+	    [-11, -9, -7, -5]
+
+	To check for keeping the original version of the list
+	    >>> l = MyList([3, 5, 2, 8])
+	    >>> l.print_sorted()
+	    [2, 3, 5, 8]
