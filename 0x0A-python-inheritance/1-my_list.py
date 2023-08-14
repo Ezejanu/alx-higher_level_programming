@@ -4,10 +4,9 @@
 
 class MyList(list):
 
-    """ The constructor for the class MyList """
-
+    """The constructor for the class MyList"""
 
     def print_sorted(self):
-        """ A public instance to print the list """
+        """A public instance to print the list"""
 
         print(sorted(self))
