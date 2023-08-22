@@ -44,5 +44,18 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             rect = Rectangle(9, 6, -3, -1)
 
+    def test_rect_with_diff_data_types(self):
+        with self.assertRaises(TypeError):
+            rect = Rectangle("9", 6, 3, 1)
+
+        with self.assertRaises(TypeError):
+            rect = Rectangle(9, 6, "3", 1)
+
+        with self.assertRaises(TypeError):
+            rect = Rectangle(9, 6, 3, "1")
+
+        with self.assertRaises(TypeError):
+            rect = Rectangle(9, 6, "3", "1")
+
 if __name__ == '__main__':
     unittest.main()
