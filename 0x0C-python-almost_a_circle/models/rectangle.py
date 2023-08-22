@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This is a class Rectangle"""
-
+import sys
 from models.base import Base
 
 
@@ -8,6 +8,8 @@ class Rectangle(Base):
     """This Rectangle class inherits from class Base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """This creates an instance of a rectangle with width, height, x, y"""
+
         super().__init__(id)
         self.width = width
         self.height = height
