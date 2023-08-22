@@ -15,3 +15,18 @@ class Square(Rectangle):
     def __str__(self):
         """Returns a string representation of the square"""
         return f"[Square] ({self.id}) {self.x}/{self.y}" f" - {self.width}"
+
+    @property
+    def size(self):
+        """The getter for the width private instance attribute"""
+        return self._Rectangle__width
+
+    @size.setter
+    def size(self, value):
+        """The setter for the width private instance attribute"""
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self._Rectangle__width = value
+        self._Rectangle__height = value
