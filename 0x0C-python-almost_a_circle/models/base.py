@@ -2,6 +2,7 @@
 """This is a file containing a base class"""
 import json
 
+
 class Base:
     """This is the base class which will be inherited by its subclass"""
 
