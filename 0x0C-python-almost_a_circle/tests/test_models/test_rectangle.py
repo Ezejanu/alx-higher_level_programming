@@ -25,9 +25,24 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             rect = Rectangle(-8, 3)
 
+        with self.assertRaises(ValueError):
+            rect = Rectangle(8, -3)
+
+        with self.assertRaises(ValueError):
+            rect = Rectangle(-8, -3)
+
         with self.assertRaises(TypeError):
             rect = Rectangle(7, "4")
 
+    def test_rectangle_with_negative_coord(self):
+        with self.assertRaises(ValueError):
+            rect = Rectangle(9, 6, -3, 1)
+
+        with self.assertRaises(ValueError):
+            rect = Rectangle(9, 6, 3, -1)
+
+        with self.assertRaises(ValueError):
+            rect = Rectangle(9, 6, -3, -1)
 
 if __name__ == '__main__':
     unittest.main()
