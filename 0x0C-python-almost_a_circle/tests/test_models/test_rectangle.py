@@ -2,6 +2,7 @@
 """This is  a unittest for class rectangle"""
 import unittest
 from models.rectangle import Rectangle
+from models.base import Base
 
 
 class TestRectangle(unittest.TestCase):
@@ -26,3 +27,7 @@ class TestRectangle(unittest.TestCase):
 
         with self.assertRaises(TypeError):
             rect = Rectangle(7, "4")
+
+
+if __name__ == '__main__':
+    unittest.main()
