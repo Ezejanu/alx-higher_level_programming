@@ -2,18 +2,15 @@
 """This is a unittest for parent class Base"""
 import unittest
 from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 
 class TestBase(unittest.TestCase):
+    """ Unittest for class Base)"""
     def test_base_with_id(self):
         obj = Base(8)
         self.assertEqual(obj.id, 8)
-
-    def test_base_without_id(self):
-        obj1 = Base()
-        obj2 = Base()
-        self.assertEqual(obj1.id, 1)
-        self.assertEqual(obj2.id, 2)
 
     def test_base_without_id_2(self):
         obj1 = Base()
