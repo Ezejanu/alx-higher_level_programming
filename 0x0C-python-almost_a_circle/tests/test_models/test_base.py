@@ -35,3 +35,6 @@ class TestBase(unittest.TestCase):
     def test_base_with_string_id(self):
         obj = Base("idr")
         self.assertEqual(obj.id, "idr")
+
+if __name__ == '__main__':
+    unittest.main()
