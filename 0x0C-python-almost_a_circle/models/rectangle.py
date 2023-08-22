@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This is a class Rectangle"""
+"""This is a child class Rectangle"""
 import sys
 from models.base import Base
 
@@ -18,10 +18,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """The getter for the width private instance attribute"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """The setter for the width private instance attribute"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -30,10 +32,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """The getter for the height private instance attribute"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """The setter for the height private instance attribute"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -42,10 +46,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """The getter for x private instance attribute"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """The setter for x private instance attribute"""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -55,10 +61,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """The getter for y private instance attribute"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """The setter for y private instance attribute"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -66,9 +74,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """Returns the area of the rectangle"""
         return self.__height * self.__width
 
     def display(self):
+        """Displays(prints) a rectangle using the # character"""
         if self.__width == 0 or self.__height == 0:
             return ""
 
@@ -87,12 +97,14 @@ class Rectangle(Base):
             print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
+        """Returns a string representation of the rectangle"""
         return (
             f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"
             f" - {self.__width}/{self.__height}"
         )
 
     def update(self, *args, **kwargs):
+        """updates the value of a rectangle"""
         if args:
             if len(args) >= 1:
                 self.id = args[0]
