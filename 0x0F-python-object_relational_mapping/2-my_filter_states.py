@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-    A script that takes in an argument and displays all values
+    a script that takes in an argument and
+    displays all values matching the argument
 """
 
 import MySQLdb
