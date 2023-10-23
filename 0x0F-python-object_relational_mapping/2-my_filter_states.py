@@ -34,12 +34,9 @@ if __name__ == "__main__":
         db=database
     )
     cursor = connection.cursor()
-    sql_query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
+    sql_query = "SELECT * FROM states WHERE name = '{}'".format(state_searched)
 
-    # Define params as a tuple)
-    params = (state_searched,)
-
-    cursor.execute(sql_query, params)
+    cursor.execute(sql_query)
     states = cursor.fetchall()
     for state in states:
         print(state)
