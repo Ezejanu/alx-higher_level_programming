@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+    A script that takes in an argument and displays all values
+"""
 
 import MySQLdb
 import sys
