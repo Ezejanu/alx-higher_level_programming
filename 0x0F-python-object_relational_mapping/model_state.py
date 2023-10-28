@@ -6,6 +6,7 @@ from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.orm import declarative_base
 Base = declarative_base()
 
+
 class State(Base):
     """ links to the MySQL table states """
 
