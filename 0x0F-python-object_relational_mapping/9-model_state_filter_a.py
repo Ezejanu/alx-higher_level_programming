@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-    a script that prints the first State object from the database hbtn_0e_6_usa
+    a script that lists all State objects that contain the letter a
+    from the database hbtn_0e_6_usa
 """
 
 import sys
@@ -24,10 +25,9 @@ if __name__ == "__main__":
     session = DBSession()
 
     # Query
-    state = session.query(State).order_by(State.id).first()
-    if state:
+    states = session.query(State).filter(State.name.like('%a%'))\
+        .order_by(State.id).all()
+    for state in states:
         print("{}: {}".format(state.id, state.name))
-    else:
-        print("Nothing")
 
     session.close()
