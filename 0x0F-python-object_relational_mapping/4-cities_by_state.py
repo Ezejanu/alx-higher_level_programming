@@ -17,7 +17,6 @@ import sys
         sys.argv[1]: MySQL username
         sys.argv[2]: MySQL password
         sys.argv[3]: MySQL database name
-        sys.argv[4]: state name searched
 
     Returns:
         None
