@@ -21,7 +21,7 @@ if __name__ == "__main__":
     # Create a session factory
     DBSession = sessionmaker(bind=engine)
 
-    # Create a session factory
+    # Create a session
     session = DBSession()
 
     # Query
