@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// A script that reads and prints the content of a file
+// A script that writes a string to a file
 
 // Import FileSystem
 const fs = require('fs');
